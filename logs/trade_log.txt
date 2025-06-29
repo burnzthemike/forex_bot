@@ -1,0 +1,442 @@
+2025-06-22 10:20:30,520 INFO Dash is running on http://127.0.0.1:8050/
+
+2025-06-22 10:20:30,532 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2025-06-22 10:20:30,532 INFO [33mPress CTRL+C to quit[0m
+2025-06-22 10:20:40,668 INFO 127.0.0.1 - - [22/Jun/2025 10:20:40] "GET / HTTP/1.1" 200 -
+2025-06-22 10:20:40,696 INFO 127.0.0.1 - - [22/Jun/2025 10:20:40] "GET /_dash-component-suites/dash/deps/polyfill@7.v3_0_4m1750512170.12.1.min.js HTTP/1.1" 200 -
+2025-06-22 10:20:40,697 INFO 127.0.0.1 - - [22/Jun/2025 10:20:40] "GET /_dash-component-suites/dash/deps/react@18.v3_0_4m1750512170.3.1.min.js HTTP/1.1" 200 -
+2025-06-22 10:20:40,697 INFO 127.0.0.1 - - [22/Jun/2025 10:20:40] "GET /_dash-component-suites/dash/deps/react-dom@18.v3_0_4m1750512170.3.1.min.js HTTP/1.1" 200 -
+2025-06-22 10:20:40,701 INFO 127.0.0.1 - - [22/Jun/2025 10:20:40] "GET /_dash-component-suites/dash/deps/prop-types@15.v3_0_4m1750512170.8.1.min.js HTTP/1.1" 200 -
+2025-06-22 10:20:40,703 INFO 127.0.0.1 - - [22/Jun/2025 10:20:40] "GET /_dash-component-suites/dash/dash-renderer/build/dash_renderer.v3_0_4m1750512169.min.js HTTP/1.1" 200 -
+2025-06-22 10:20:40,704 INFO 127.0.0.1 - - [22/Jun/2025 10:20:40] "GET /_dash-component-suites/dash/dcc/dash_core_components.v3_0_6m1750512170.js HTTP/1.1" 200 -
+2025-06-22 10:20:40,704 INFO 127.0.0.1 - - [22/Jun/2025 10:20:40] "GET /_dash-component-suites/dash/dcc/dash_core_components-shared.v3_0_6m1750512169.js HTTP/1.1" 200 -
+2025-06-22 10:20:40,708 INFO 127.0.0.1 - - [22/Jun/2025 10:20:40] "GET /_dash-component-suites/dash/html/dash_html_components.v3_0_2m1750512170.min.js HTTP/1.1" 200 -
+2025-06-22 10:20:40,708 INFO 127.0.0.1 - - [22/Jun/2025 10:20:40] "GET /_dash-component-suites/dash/dash_table/bundle.v6_0_2m1750512169.js HTTP/1.1" 200 -
+2025-06-22 10:20:41,957 INFO 127.0.0.1 - - [22/Jun/2025 10:20:41] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-22 10:20:41,957 INFO 127.0.0.1 - - [22/Jun/2025 10:20:41] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-22 10:20:42,068 INFO 127.0.0.1 - - [22/Jun/2025 10:20:42] "GET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1" 200 -
+2025-06-22 10:20:42,076 INFO 127.0.0.1 - - [22/Jun/2025 10:20:42] "GET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1" 200 -
+2025-06-22 10:20:42,082 ERROR Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\indexes\base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 165, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5745, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5753, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'time'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\dash.py", line 1414, in dispatch
+    ctx.run(
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 536, in add_context
+    raise err
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 525, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 47, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\dashboard.py", line 27, in update
+    fig = go.Figure(go.Scatter(x=df["time"], y=df["equity"], mode="lines"))
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\frame.py", line 3807, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\indexes\base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: 'time'
+2025-06-22 10:20:42,120 INFO 127.0.0.1 - - [22/Jun/2025 10:20:42] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2025-06-22 10:22:04,728 INFO Dash is running on http://127.0.0.1:8050/
+
+2025-06-22 10:22:04,734 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2025-06-22 10:22:04,734 INFO [33mPress CTRL+C to quit[0m
+2025-06-22 10:22:42,177 ERROR Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\indexes\base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 165, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5745, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5753, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'time'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\dash.py", line 1414, in dispatch
+    ctx.run(
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 536, in add_context
+    raise err
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 525, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 47, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\dashboard.py", line 27, in update
+    fig = go.Figure(go.Scatter(x=df["time"], y=df["equity"], mode="lines"))
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\frame.py", line 3807, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\indexes\base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: 'time'
+2025-06-22 10:22:42,255 INFO 127.0.0.1 - - [22/Jun/2025 10:22:42] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2025-06-22 10:23:42,263 ERROR Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\indexes\base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 165, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5745, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5753, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'time'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\dash.py", line 1414, in dispatch
+    ctx.run(
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 536, in add_context
+    raise err
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 525, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 47, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\dashboard.py", line 27, in update
+    fig = go.Figure(go.Scatter(x=df["time"], y=df["equity"], mode="lines"))
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\frame.py", line 3807, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\indexes\base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: 'time'
+2025-06-22 10:23:42,267 INFO 127.0.0.1 - - [22/Jun/2025 10:23:42] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2025-06-22 10:24:54,939 INFO Dash is running on http://127.0.0.1:8050/
+
+2025-06-22 10:24:54,946 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8050
+2025-06-22 10:24:54,946 INFO [33mPress CTRL+C to quit[0m
+2025-06-22 10:25:16,582 INFO 127.0.0.1 - - [22/Jun/2025 10:25:16] "GET / HTTP/1.1" 200 -
+2025-06-22 10:25:17,657 INFO 127.0.0.1 - - [22/Jun/2025 10:25:17] "GET /_dash-layout HTTP/1.1" 200 -
+2025-06-22 10:25:17,660 INFO 127.0.0.1 - - [22/Jun/2025 10:25:17] "GET /_dash-dependencies HTTP/1.1" 200 -
+2025-06-22 10:25:17,726 INFO 127.0.0.1 - - [22/Jun/2025 10:25:17] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2025-06-22 10:25:17,731 ERROR Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\indexes\base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 165, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5745, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5753, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'time'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\dash.py", line 1414, in dispatch
+    ctx.run(
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 536, in add_context
+    raise err
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 525, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 47, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\dashboard.py", line 27, in update
+    fig = go.Figure(go.Scatter(x=df["time"], y=df["equity"], mode="lines"))
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\frame.py", line 3807, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\indexes\base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: 'time'
+2025-06-22 10:25:17,731 INFO 127.0.0.1 - - [22/Jun/2025 10:25:17] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2025-06-22 10:25:17,797 INFO 127.0.0.1 - - [22/Jun/2025 10:25:17] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2025-06-22 10:25:17,998 INFO 127.0.0.1 - - [22/Jun/2025 10:25:17] "GET /_favicon.ico?v=3.0.4 HTTP/1.1" 200 -
+2025-06-22 10:26:18,261 ERROR Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\indexes\base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 165, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5745, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5753, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'time'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\dash.py", line 1414, in dispatch
+    ctx.run(
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 536, in add_context
+    raise err
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 525, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 47, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\dashboard.py", line 27, in update
+    fig = go.Figure(go.Scatter(x=df["time"], y=df["equity"], mode="lines"))
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\frame.py", line 3807, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\indexes\base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: 'time'
+2025-06-22 10:26:18,271 INFO 127.0.0.1 - - [22/Jun/2025 10:26:18] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2025-06-22 10:27:18,258 ERROR Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\indexes\base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 165, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5745, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5753, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'time'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\dash.py", line 1414, in dispatch
+    ctx.run(
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 536, in add_context
+    raise err
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 525, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 47, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\dashboard.py", line 27, in update
+    fig = go.Figure(go.Scatter(x=df["time"], y=df["equity"], mode="lines"))
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\frame.py", line 3807, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\indexes\base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: 'time'
+2025-06-22 10:27:18,267 INFO 127.0.0.1 - - [22/Jun/2025 10:27:18] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2025-06-22 10:28:18,291 ERROR Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\indexes\base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 165, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5745, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5753, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'time'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\dash.py", line 1414, in dispatch
+    ctx.run(
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 536, in add_context
+    raise err
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 525, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 47, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\dashboard.py", line 27, in update
+    fig = go.Figure(go.Scatter(x=df["time"], y=df["equity"], mode="lines"))
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\frame.py", line 3807, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\indexes\base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: 'time'
+2025-06-22 10:28:18,324 INFO 127.0.0.1 - - [22/Jun/2025 10:28:18] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2025-06-22 10:29:18,293 ERROR Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\indexes\base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 165, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5745, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5753, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'time'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\dash.py", line 1414, in dispatch
+    ctx.run(
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 536, in add_context
+    raise err
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 525, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 47, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\dashboard.py", line 27, in update
+    fig = go.Figure(go.Scatter(x=df["time"], y=df["equity"], mode="lines"))
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\frame.py", line 3807, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\indexes\base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: 'time'
+2025-06-22 10:29:18,309 INFO 127.0.0.1 - - [22/Jun/2025 10:29:18] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2025-06-22 10:30:18,266 ERROR Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\indexes\base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 165, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5745, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5753, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'time'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\dash.py", line 1414, in dispatch
+    ctx.run(
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 536, in add_context
+    raise err
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 525, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 47, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\dashboard.py", line 27, in update
+    fig = go.Figure(go.Scatter(x=df["time"], y=df["equity"], mode="lines"))
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\frame.py", line 3807, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\indexes\base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: 'time'
+2025-06-22 10:30:18,279 INFO 127.0.0.1 - - [22/Jun/2025 10:30:18] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2025-06-22 10:31:19,258 ERROR Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\indexes\base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 165, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5745, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5753, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'time'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\dash.py", line 1414, in dispatch
+    ctx.run(
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 536, in add_context
+    raise err
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 525, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 47, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\dashboard.py", line 27, in update
+    fig = go.Figure(go.Scatter(x=df["time"], y=df["equity"], mode="lines"))
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\frame.py", line 3807, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\indexes\base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: 'time'
+2025-06-22 10:31:19,274 INFO 127.0.0.1 - - [22/Jun/2025 10:31:19] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -
+2025-06-22 10:32:19,280 ERROR Exception on /_dash-update-component [POST]
+Traceback (most recent call last):
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\indexes\base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 165, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5745, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5753, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'time'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\dash.py", line 1414, in dispatch
+    ctx.run(
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 536, in add_context
+    raise err
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 525, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)  # type: ignore[reportArgumentType]
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\dash\_callback.py", line 47, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\dashboard.py", line 27, in update
+    fig = go.Figure(go.Scatter(x=df["time"], y=df["equity"], mode="lines"))
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\frame.py", line 3807, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\byrne\OneDrive\Desktop\forex_bot_project\venv\lib\site-packages\pandas\core\indexes\base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: 'time'
+2025-06-22 10:32:19,305 INFO 127.0.0.1 - - [22/Jun/2025 10:32:19] "[35m[1mPOST /_dash-update-component HTTP/1.1[0m" 500 -

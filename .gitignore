@@ -1,0 +1,6 @@
+"venv/"           
+"__pycache__/"    
+"*.pyc"           
+"cache/"          
+".env"            
+"ml_model_*.joblib"
